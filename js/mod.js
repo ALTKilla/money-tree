@@ -1,14 +1,14 @@
 let modInfo = {
-	name: "The ??? Tree",
+	name: "The Money Tree",
 	id: "mymod",
 	author: "nobody",
-	pointsName: "points",
+	pointsName: "Money",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 720,  // In hours
 }
 
 // Set your version in num and name
@@ -42,7 +42,7 @@ function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
 
-	let gain = new Decimal(1)
+	let gain = new Decimal(100)
 	return gain
 }
 
