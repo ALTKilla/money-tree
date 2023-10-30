@@ -60,5 +60,13 @@ addLayer("M", {
         ],
         layerShown(){return true},
         passiveGeneration() { return true&&(player.ma.current!="R")?1:0 },
-        })
+        milestones: {
+            0: {
+                requirementDescription: "123 waffles",
+                effectDescription: "blah",
+                done() { return player.w.points.gte(123) }
+            }
+            
+        }
+    })
         
